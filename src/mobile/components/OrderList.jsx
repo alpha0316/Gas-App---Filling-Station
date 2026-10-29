@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 import OrderRow from "./OrderRow";
 
 export default function OrderList({ orders, selectedIds, onSelect, onLongPress, title = "Incoming Orders", showHeading = true }) {
@@ -7,7 +7,7 @@ export default function OrderList({ orders, selectedIds, onSelect, onLongPress, 
       {showHeading && (
         <div className="flex items-center justify-between px-5 py-2">
           <h2 className="text-[15px] font-bold">{title}</h2>
-          <Search size={17} className="text-muted" />
+          <MagnifyingGlassIcon size={17} className="text-muted" />
         </div>
       )}
 

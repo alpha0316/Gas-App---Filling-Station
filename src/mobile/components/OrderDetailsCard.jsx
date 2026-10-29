@@ -1,4 +1,4 @@
-import { Bike, MapPin, Flame, Package } from "lucide-react";
+import { BicycleIcon, MapPinIcon, FlameIcon, PackageIcon } from "@phosphor-icons/react";
 
 function IconBadge({ children }) {
   return (
@@ -29,7 +29,7 @@ export default function OrderDetailsCard({ order, onMarkFilled }) {
         <div className="mx-2 bg-white rounded-[12px] shadow-[0_1px_4px_rgba(12,12,13,0.05),0_1px_4px_rgba(12,12,13,0.10)] border-t border-black/5 p-2 flex flex-col gap-3">
           <div className="flex items-center justify-between px-1">
             <div className="flex items-center gap-1.5 text-black/40 text-xs">
-              <Package size={14} />
+              <PackageIcon size={14} />
               <span>Order</span>
             </div>
             <p className="text-xs">
@@ -40,7 +40,7 @@ export default function OrderDetailsCard({ order, onMarkFilled }) {
 
           <div className="flex items-center gap-3">
             <IconBadge>
-              <Bike size={16} className="text-accent" />
+              <BicycleIcon size={16} className="text-accent" />
             </IconBadge>
             <div>
               <p className="text-[11px] uppercase text-black/50">Rider</p>
@@ -52,7 +52,7 @@ export default function OrderDetailsCard({ order, onMarkFilled }) {
 
           <div className="flex items-center gap-3">
             <IconBadge>
-              <MapPin size={16} className="text-black/70" />
+              <MapPinIcon size={16} className="text-black/70" />
             </IconBadge>
             <div>
               <p className="text-[11px] uppercase text-black/50">Deliver to</p>
@@ -65,7 +65,7 @@ export default function OrderDetailsCard({ order, onMarkFilled }) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <IconBadge>
-                <Flame size={16} className="text-[#F2A71A]" />
+                <FlameIcon size={16} className="text-[#F2A71A]" />
               </IconBadge>
               <p className="text-sm">{order.size} Size</p>
             </div>

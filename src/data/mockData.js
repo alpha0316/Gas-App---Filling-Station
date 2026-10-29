@@ -63,12 +63,12 @@ function makeOrder(id, status, overrides = {}) {
 
 export const TODAY_ORDERS = [
   makeOrder("ORD-2291", "incoming", {
-    customer: { name: "Akosua Darko", phone: "024 712 5588" },
-    rider: "Kwame Osei",
+    customer: { name: "Essandoh Prince Takyi", phone: "055 414 4611" },
+    rider: "Kwame Osei Asiedu",
     address: "Harper Rd · Adum",
-    size: "Medium",
-    cylinders: 2,
-    tip: 10,
+    size: "Small",
+    cylinders: 1,
+    tip: 15,
     time: "2 min ago",
   }),
   makeOrder("ORD-2290", "filled", {

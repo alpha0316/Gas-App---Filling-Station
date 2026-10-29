@@ -34,7 +34,7 @@ export default function App() {
     <div className="flex min-h-screen bg-page">
       <Sidebar activePage={activePage} onNavigate={setActivePage} />
 
-      <main className="flex-1 min-w-0">
+      <main className="flex-1 min-w-0 bg-surface">
         <Topbar activePage={activePage} hasNewOrder={hasNewOrder} onBellClick={handleBellClick} />
         <Page />
       </main>

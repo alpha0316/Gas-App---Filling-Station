@@ -1,4 +1,4 @@
-import { MapPin, Bike } from "lucide-react";
+import { MapPinIcon, BicycleIcon } from "@phosphor-icons/react";
 import { ACTIVE_DELIVERIES } from "../data/mockData";
 
 const PIN_POSITIONS = [
@@ -31,7 +31,7 @@ export default function MapPage() {
               style={PIN_POSITIONS[i % PIN_POSITIONS.length]}
             >
               <div className="w-9 h-9 rounded-full bg-accent text-white flex items-center justify-center shadow-md">
-                <Bike size={16} />
+                <BicycleIcon size={16} />
               </div>
               <div className="w-2 h-2 rotate-45 bg-accent -mt-1" />
             </div>
@@ -56,7 +56,7 @@ export default function MapPage() {
                   </span>
                 </div>
                 <p className="text-xs text-muted flex items-center gap-1">
-                  <MapPin size={12} /> {d.customer} · {d.address}
+                  <MapPinIcon size={12} /> {d.customer} · {d.address}
                 </p>
               </div>
             ))}

@@ -1,4 +1,4 @@
-import { X, Bike, MapPin, Flame, Check } from "lucide-react";
+import { XIcon, BicycleIcon, MapPinIcon, FlameIcon, CheckIcon } from "@phosphor-icons/react";
 import { PRICES } from "../data/mockData";
 
 export default function NewOrderPanel({ order, open, onClose, onAccept, onDecline, accepted }) {
@@ -11,14 +11,14 @@ export default function NewOrderPanel({ order, open, onClose, onAccept, onDeclin
         }`}
       />
       <div
-        className={`fixed top-0 right-0 h-screen w-[380px] bg-surface border-l border-border z-50 shadow-xl transition-transform duration-300 flex flex-col ${
+        className={`fixed top-0 right-0 h-screen w-95 bg-surface border-l border-border z-50 shadow-xl transition-transform duration-300 flex flex-col ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex items-center justify-between px-5 py-4 border-b border-border">
           <p className="font-semibold">New Order</p>
           <button onClick={onClose} className="text-muted hover:text-ink">
-            <X size={18} />
+            <XIcon size={18} />
           </button>
         </div>
 
@@ -36,17 +36,17 @@ export default function NewOrderPanel({ order, open, onClose, onAccept, onDeclin
 
             <div className="space-y-3 mb-5">
               <div className="flex items-center gap-3 text-sm">
-                <Bike size={16} className="text-muted shrink-0" />
+                <BicycleIcon size={16} className="text-muted shrink-0" />
                 <span className="text-muted w-20 shrink-0">Rider</span>
                 <span className="font-medium">{order.rider}</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <MapPin size={16} className="text-muted shrink-0" />
+                <MapPinIcon size={16} className="text-muted shrink-0" />
                 <span className="text-muted w-20 shrink-0">Deliver to</span>
                 <span className="font-medium">{order.address}</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <Flame size={16} className="text-muted shrink-0" />
+                <FlameIcon size={16} className="text-muted shrink-0" />
                 <span className="text-muted w-20 shrink-0">Product</span>
                 <span className="font-medium">
                   {order.cylinders} × {order.size} · ₵{PRICES[order.size]} each
@@ -61,7 +61,7 @@ export default function NewOrderPanel({ order, open, onClose, onAccept, onDeclin
 
             {accepted ? (
               <div className="flex items-center justify-center gap-2 py-3 rounded-button bg-success-tint text-success font-semibold text-sm">
-                <Check size={16} /> Order accepted
+                <CheckIcon size={16} /> Order accepted
               </div>
             ) : (
               <div className="flex gap-3">

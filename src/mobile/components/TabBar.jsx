@@ -9,7 +9,7 @@ const TABS = [
 export default function TabBar({ active, onChange }) {
   return (
     <div
-      className="max-w-[250px] mx-auto flex items-center justify-between p-0.5 bg-white/90 rounded-[36px] shadow-[0_1px_4px_rgba(12,12,13,0.05),0_1px_4px_rgba(12,12,13,0.10)]"
+      className="max-w-62.5 mx-auto flex items-center justify-between p-0.5 bg-white/90 rounded-[36px] shadow-[0_1px_4px_rgba(12,12,13,0.05),0_1px_4px_rgba(12,12,13,0.10)]"
     >
       {TABS.map(({ key, label, Icon }) => {
         const isActive = active === key;
@@ -17,7 +17,7 @@ export default function TabBar({ active, onChange }) {
           <button
             key={key}
             onClick={() => onChange(key)}
-            className={`flex-1 flex flex-col items-center gap-1 py-1 rounded-[32px] transition-colors ${
+            className={`flex-1 flex flex-col items-center gap-1 py-1 rounded-4xl transition-colors ${
               isActive ? "bg-[#F4F4F4] px-2 shadow-[0_1px_4px_rgba(12,12,13,0.05),0_1px_4px_rgba(12,12,13,0.10)]" : "px-4"
             }`}
             style={isActive ? { outline: "2px solid white", outlineOffset: "-2px" } : undefined}

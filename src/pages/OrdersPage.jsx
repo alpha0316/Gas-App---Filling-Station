@@ -1,5 +1,5 @@
 import { useState, Fragment } from "react";
-import { ChevronDown } from "lucide-react";
+import { CaretDownIcon } from "@phosphor-icons/react";
 import StatusChip from "../components/StatusChip";
 import { ALL_ORDERS, PRICES } from "../data/mockData";
 
@@ -67,7 +67,7 @@ export default function OrdersPage() {
                     <td className="py-3.5 px-5">
                       <div className="flex items-center gap-2">
                         <StatusChip status={order.status} />
-                        <ChevronDown
+                        <CaretDownIcon
                           size={14}
                           className={`text-muted transition-transform ${isOpen ? "rotate-180" : ""}`}
                         />

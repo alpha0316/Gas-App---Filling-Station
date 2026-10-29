@@ -1,28 +1,26 @@
 import StatCard from "../components/StatCard";
 import OrderCard from "../components/OrderCard";
 import StatusChip from "../components/StatusChip";
-import { TODAY_ORDERS, ALL_ORDERS, totalRevenue } from "../data/mockData";
+import { TODAY_ORDERS } from "../data/mockData";
 
 export default function HomePage() {
-  const todayRevenue = totalRevenue(TODAY_ORDERS);
-  const allRevenue = totalRevenue(ALL_ORDERS);
   const incoming = TODAY_ORDERS.filter((o) => o.status === "incoming");
   const earlierFilled = TODAY_ORDERS.filter((o) => o.status === "filled");
 
   return (
     <div className="px-8 pb-10">
-      <h1 className="text-2xl font-bold tracking-tight mb-6">Good Afternoon, Afia</h1>
+      <h1 className="text-2xl font-bold tracking-tight mb-6">Good Afternoon, Prince</h1>
 
-      <div className="flex bg-surface border border-border rounded-card mb-8 overflow-hidden">
-        <StatCard label="Total Orders" value={ALL_ORDERS.length} />
-        <StatCard label="Orders Today" value={TODAY_ORDERS.length} />
-        <StatCard label="Total Revenue" value={`₵${allRevenue.toLocaleString()}`} />
-        <StatCard label="Today's Revenue" value={`₵${todayRevenue.toLocaleString()}`} last />
+      <div className="flex bg-page rounded-card mb-8 overflow-hidden">
+        <StatCard label="Total Orders" value="120" />
+        <StatCard label="Orders Today" value="24" />
+        <StatCard label="Total Revenue" value="₵57,000.00" />
+        <StatCard label="Today's Revenue" value="₵750.00" last />
       </div>
 
       <section className="mb-8">
         <h2 className="text-base font-semibold mb-4">Today's Orders</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="flex flex-wrap gap-4">
           {incoming.map((order) => (
             <OrderCard key={order.id} order={order} />
           ))}

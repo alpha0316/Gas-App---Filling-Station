@@ -59,7 +59,7 @@ export default function MobileApp() {
 
   return (
     <div className="min-h-dvh bg-page sm:bg-[#d8dadd] sm:flex sm:items-center sm:justify-center sm:py-8">
-      <div className="w-full h-dvh sm:w-[375px] sm:h-[780px] bg-page sm:rounded-[36px] sm:border sm:border-[#c4c7cc] sm:shadow-xl overflow-hidden flex flex-col relative">
+      <div className="w-full h-dvh sm:w-93.75 sm:h-195 bg-page sm:rounded-[36px] sm:border sm:border-[#c4c7cc] sm:shadow-xl overflow-hidden flex flex-col relative">
         <div className="hidden sm:block">
           <StatusBar />
         </div>
@@ -79,7 +79,7 @@ export default function MobileApp() {
         </div>
 
         <div className="hidden sm:flex justify-center pb-2">
-          <span className="w-[134px] h-[5px] rounded-full bg-black" />
+          <span className="w-33.5 h-1.25 rounded-full bg-black" />
         </div>
       </div>
     </div>

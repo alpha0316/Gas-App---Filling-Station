@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Check } from "lucide-react";
+import { CheckIcon } from "@phosphor-icons/react";
 
 const LONG_PRESS_MS = 500;
 
@@ -36,7 +36,7 @@ export default function OrderRow({ order, selected, onSelect, onLongPress }) {
     >
       {selected ? (
         <span className="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center shrink-0">
-          <Check size={12} strokeWidth={3} />
+          <CheckIcon size={12} weight="bold" />
         </span>
       ) : (
         <span className="w-5 h-5 rounded-full border-[1.5px] border-black/15 shrink-0" />

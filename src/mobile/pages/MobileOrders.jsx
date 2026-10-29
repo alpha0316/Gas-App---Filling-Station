@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, Calendar } from "lucide-react";
+import { MagnifyingGlassIcon, CalendarIcon } from "@phosphor-icons/react";
 import Header, { HeaderBadge } from "../components/Header";
 import OrderList from "../components/OrderList";
 import { MOBILE_ORDERS } from "../data";
@@ -20,7 +20,7 @@ export default function MobileOrders({ selectedIds, onSelect, onLongPress }) {
         title="Orders"
         right={
           <button className="w-9 h-9 flex items-center justify-center">
-            <Search size={18} className="text-ink" />
+            <MagnifyingGlassIcon size={18} className="text-ink" />
           </button>
         }
       />
@@ -40,7 +40,7 @@ export default function MobileOrders({ selectedIds, onSelect, onLongPress }) {
           ))}
         </div>
         <HeaderBadge>
-          <Calendar size={15} className="text-muted" />
+          <CalendarIcon size={15} className="text-muted" />
         </HeaderBadge>
       </div>
 

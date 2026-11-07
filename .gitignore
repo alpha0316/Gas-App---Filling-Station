@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Project docs and agent files
+CLAUDE.md
+AGENTS.md
+docs/
+*.tsbuildinfo
+coverage

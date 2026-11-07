@@ -1,17 +1,23 @@
-# React + Vite
+# GasApp Filling Station
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Dashboard for filling station staff. Staff see incoming orders, mark cylinders as filled, create orders for walk-in or phone customers, and view analytics. Only accounts with role `station` can sign in.
 
-Currently, two official plugins are available:
+Stack: React, Vite, TypeScript, React Router, TanStack Query, zustand, Tailwind, Socket.IO client.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Setup
+```
+npm install
+cp .env.example .env   # set VITE_API_URL
+npm run dev            # http://localhost:3000
+```
 
-## React Compiler
+In development, `VITE_API_URL` defaults to `http://localhost:4000/api/v1`. A production build needs it set.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts
+- `npm run dev` starts the dev server.
+- `npm run build` type-checks and builds to `dist/`.
+- `npm run typecheck` runs `tsc`.
+- `npm run lint` runs oxlint.
+- `npm test` runs the unit tests (vitest).
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-# Gas-App---Filling-Station
+The API contract is in the `gasapp-backend` repository, file `docs/API.md`.
